@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hyrule Compendium API</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="wrapper">
+    <h1 class="title">Hyrule Compendium API</h1>
+    <div class="underline"></div>
+    <div class="search">
+      <input type="text" id="searchInput" placeholder="Try enter horse." list="entries">
+      <div id="datalistInsert"></div>
+      <button onclick="hyuleSearch()">Search</button>
+    </div>
+    <div class="description">
+      <p>This website provides information from the Hyrule Compendium API. To get a result, input an entry into the search box.</p>
+    </div>
+    <div class="underline"></div>
+    <div id="outputCard"></div>
+    <div class="apiLink">
+      <a href="https://gadhagod.github.io/Hyrule-Compendium-API/#/">API Documentation</a>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
