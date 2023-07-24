@@ -66,6 +66,9 @@ a {
 }
 
 
+.outputCard li {
+  margin-bottom: 10px;
+}
 
 
 .apiLink {

@@ -56,6 +56,7 @@ function displayResult(data) {
   infoList.style.backgroundPosition = "0px 50%";
   infoList.style.paddingLeft = "0px";
 
+
     // main list elements
     var categoryItem = document.createElement('li');
     categoryItem.textContent = 'Category: ' + data.category;
