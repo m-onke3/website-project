@@ -8,7 +8,7 @@ fetch('datalist.html')
   .catch(error => console.log(error));
 
 // Function to handle the search button click
-function hyuleSearch() {
+function hyruleSearch() {
   var searchQuery = document.getElementById('searchInput').value;
   var apiUrl = `https://botw-compendium.herokuapp.com/api/v3/compendium/entry/${searchQuery}`;
 
@@ -186,9 +186,9 @@ var searchInput = document.getElementById('searchInput');
 searchInput.addEventListener('keyup', function(event) {
   if (event.keyCode === 13) {
     event.preventDefault();
-    hyuleSearch();
+    hyruleSearch();
   }
-});
+}); 
 
 
 // just a function
