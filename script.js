@@ -49,8 +49,9 @@ function displayResult(data) {
   cardContent.appendChild(nameElement);
 
   var infoList = document.createElement('ul');
-  infoList.style.listStyleType = 'disc';
-  infoList.style.marginLeft = '20px';
+  infoList.style.listStyle = "none";
+  infoList.style.backgroundPosition = "0px 50%";
+  infoList.style.paddingLeft = "0px";
 
     // main list elements
     var categoryItem = document.createElement('li');
