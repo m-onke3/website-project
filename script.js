@@ -72,7 +72,7 @@ function displayResult(data) {
     commonLocationsItem.textContent = "Common Locations: None";
     }
   else {
-    commonLocationsItem.textContent = "Common Locations: " + data.common_locations;
+    commonLocationsItem.textContent = "Common Locations: " + commaSpace(data.common_locations);
   }
     infoList.appendChild(commonLocationsItem);
 
@@ -88,7 +88,7 @@ function displayResult(data) {
       dropsItem.textContent = "Drops: None";
     }
     else {
-      dropsItem.textContent = "Drops: " + data.drops;
+      dropsItem.textContent = "Drops: " + commaSpace(data.drops);
     }
     infoList.appendChild(dropsItem);
     
@@ -158,7 +158,7 @@ function displayResult(data) {
       dropsItem.textContent = "Drops: None";
     }
     else {
-      dropsItem.textContent = "Drops: " + data.drops;
+      dropsItem.textContent = "Drops: " + commaSpace(data.drops);
     }
     infoList.appendChild(dropsItem);
     
@@ -199,7 +199,10 @@ function capitaliseWords(string) {
   });
 }
 
-
+// add a space after every instance of a comma in regex
+function commaSpace(string) {
+  return string.replace(/,/g, ', ');
+}
 
 
 
