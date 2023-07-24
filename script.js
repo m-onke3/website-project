@@ -48,7 +48,7 @@ function displayResult(data) {
   cardContent.appendChild(imageElement);
 
   var nameElement = document.createElement('h2');
-  nameElement.textContent = capitaliseWords(data.name) + ' (#' + data.id + ')';
+  nameElement.innerHTML = capitaliseWords(data.name) + ' (#' + data.id + ')';
   cardContent.appendChild(nameElement);
 
   var infoList = document.createElement('ul');
@@ -59,25 +59,25 @@ function displayResult(data) {
 
     // main list elements
     var categoryItem = document.createElement('li');
-    categoryItem.textContent = 'Category: ' + data.category;
+    categoryItem.innerHTML = '<b>Category: </b>' + data.category;
     infoList.appendChild(categoryItem);
 
     var descriptionItem = document.createElement('li');
-    descriptionItem.textContent = 'Description: ' + data.description;
+    descriptionItem.innerHTML = '<b>Description: </b>' + data.description;
     infoList.appendChild(descriptionItem);
 
     
     var commonLocationsItem = document.createElement('li');
     if (!data.common_locations) {
-    commonLocationsItem.textContent = "Common Locations: None";
+    commonLocationsItem.innerHTML = "<b>Common Locations:</b> None";
     }
   else {
-    commonLocationsItem.textContent = "Common Locations: " + commaSpace(data.common_locations);
+    commonLocationsItem.innerHTML = "<b>Common Locations: </b>" + commaSpace(data.common_locations);
   }
     infoList.appendChild(commonLocationsItem);
 
   var dlcItem = document.createElement('li');
-  dlcItem.textContent = 'DLC Item?: ' + data.dlc;
+  dlcItem.innerHTML = '<b>DLC Item?:</b> ' + data.dlc;
   infoList.appendChild(dlcItem);
 
   // additional fields
@@ -85,10 +85,10 @@ function displayResult(data) {
 
     var dropsItem = document.createElement('li');
     if (data.drops.length == 0 || !data.drops) {
-      dropsItem.textContent = "Drops: None";
+      dropsItem.innerHTML = "<b>Drops: </b> None";
     }
     else {
-      dropsItem.textContent = "Drops: " + commaSpace(data.drops);
+      dropsItem.innerHTML = "<b>Drops: </b> " + commaSpace(data.drops);
     }
     infoList.appendChild(dropsItem);
     
@@ -97,12 +97,12 @@ function displayResult(data) {
 
     if (data.properties.attack != 0 && data.properties.defense == 0) {
       var atkItem = document.createElement('li');
-      atkItem.textContent = "Attack: " + data.properties.attack;
+      atkItem.innerHTML = "<b>Attack: </b> " + data.properties.attack;
       infoList.appendChild(atkItem);
     }
     else if (data.properties.attack == 0 && data.properties.defense != 0) {
       var defItem = document.createElement('li');
-      defItem.textContent = "Attack: " + data.properties.attack;
+      defItem.innerHTML = "<b>Defense: </b> " + data.properties.defense;
       infoList.appendChild(defItem);
     }
   } 
@@ -110,15 +110,15 @@ function displayResult(data) {
 
     var heartsRecoveredItem = document.createElement('li');
     var cookingEffectItem = document.createElement('li');
-    heartsRecoveredItem.textContent = "Hearts Recovered: " + data.hearts_recovered;
+    heartsRecoveredItem.innerHTML = "<b>Hearts Recovered: </b> " + data.hearts_recovered;
     infoList.appendChild(heartsRecoveredItem);
 
     if (data.cooking_effect == "") {
-      cookingEffectItem.textContent = "Cooking Effect: None";
+      cookingEffectItem.innerHTML = "<b>Cooking Effect </b>None";
       infoList.appendChild(cookingEffectItem);
     }
     else {
-      cookingEffectItem.textContent = "Cooking Effect: " + data.cooking_effect;
+      cookingEffectItem.innerHTML = "<b>Cooking Effect </b>" + data.cooking_effect;
       infoList.appendChild(cookingEffectItem);
     }
     
@@ -128,26 +128,26 @@ function displayResult(data) {
 
     var heartsRecoveredItem = document.createElement('li');
     var cookingEffectItem = document.createElement('li');
-    heartsRecoveredItem.textContent = "Hearts Recovered: " + data.hearts_recovered;
+    heartsRecoveredItem.innerHTML = "<b>Hearts Recovered: </b> " + data.hearts_recovered;
     infoList.appendChild(heartsRecoveredItem);
 
     if (data.cooking_effect == "") {
-      cookingEffectItem.textContent = "Cooking Effect: None";
+      cookingEffectItem.innerHTML = "<b>Cooking Effect </b>None";
       infoList.appendChild(cookingEffectItem);
     }
     else {
-      cookingEffectItem.textContent = "Cooking Effect: " + data.cooking_effect;
+      cookingEffectItem.innerHTML = "<b>Cooking Effect </b>" + data.cooking_effect;
       infoList.appendChild(cookingEffectItem);
     } 
 
     var edibleItem = document.createElement('li');
-      edibleItem.textContent = "Edible: true";
+      edibleItem.innerHTML = "<b>Edible: </b> true";
       infoList.appendChild(edibleItem);
       
     }
     else { // non-food
         var edibleItem = document.createElement('li');
-        edibleItem.textContent = "Edible: false";
+        edibleItem.innerHTML = "<b>Edible: </b> false";
         infoList.appendChild(edibleItem);
     }
   } 
@@ -155,10 +155,10 @@ function displayResult(data) {
 
     var dropsItem = document.createElement('li');
     if (data.drops.length == 0 || !data.drops) {
-      dropsItem.textContent = "Drops: None";
+      dropsItem.innerHTML = "<b>Drops: </b> None";
     }
     else {
-      dropsItem.textContent = "Drops: " + commaSpace(data.drops);
+      dropsItem.innerHTML = "<b>Drops: </b> " + commaSpace(data.drops);
     }
     infoList.appendChild(dropsItem);
     
@@ -175,7 +175,7 @@ function displayError() {
   outputCard.innerHTML = '';
 
   var errorMessage = document.createElement('h2');
-  errorMessage.textContent = `Error: No data found for ${searchQuery}!`;
+  errorMessage.innerHTML = `Error: No data found for ${searchQuery}!`;
   errorMessage.style.color = 'red';
   errorMessage.style.textAlign = 'center';
 
@@ -204,8 +204,6 @@ function commaSpace(string) {
   var inputString = string.toString();
   return inputString.replace(/,/g, ', ');
 }
-
-
 
 
 // just a function
