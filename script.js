@@ -48,7 +48,7 @@ function displayResult(data) {
   cardContent.appendChild(imageElement);
 
   var nameElement = document.createElement('h2');
-  nameElement.textContent = data.name + ' (#' + data.id + ')';
+  nameElement.textContent = capitaliseWords(data.name) + ' (#' + data.id + ')';
   cardContent.appendChild(nameElement);
 
   var infoList = document.createElement('ul');
@@ -190,6 +190,18 @@ searchInput.addEventListener('keyup', function(event) {
     hyruleSearch();
   }
 }); 
+
+
+// capitalise every word function with regex 💀
+function capitaliseWords(string) {
+  return string.replace(/(\b[a-z](?!\s))/g, function(match) {
+    return match.toUpperCase();
+  });
+}
+
+
+
+
 
 
 // just a function
