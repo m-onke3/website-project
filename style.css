@@ -62,3 +62,39 @@ body {
   margin-top: 20px;
 }
 
+/*  navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 0 10px;
+  background-color: mediumpurple;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: purple;
+}
+
+/* marquee stuff */
+.marquee {
+  animation-name: spiral;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes spiral {
+  0% {
+    transform: rotate(0deg) translateX(0%);
+  }
+  100% {
+    transform: rotate(720deg) translateX(100%);
+  }
+}

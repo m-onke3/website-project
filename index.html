@@ -5,13 +5,19 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a id="suspicious" onclick="suspiciousFunction()">not a suspicious button</a>
+  </div>
+
   <div class="wrapper">
     <h1 class="title">Hyrule Compendium API</h1>
     <div class="underline"></div>
     <div class="search">
       <input type="text" id="searchInput" placeholder="Try enter horse." list="entries">
       <div id="datalistInsert"></div>
-      <button onclick="hyuleSearch()">Search</button>
+      <button onclick="hyruleSearch()">Search</button>
     </div>
     <div class="description">
       <p>This website provides information from the Hyrule Compendium API. To get a result, input an entry into the search box.</p>

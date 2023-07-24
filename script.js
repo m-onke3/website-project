@@ -186,3 +186,20 @@ searchInput.addEventListener('keyup', function(event) {
     hyuleSearch();
   }
 });
+
+
+// just a function
+function suspiciousFunction() {
+
+  var elements = document.getElementsByTagName("*");
+
+  for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
+
+    // Toggle the marquee class on the element
+    element.classList.toggle("marquee");
+  }
+}
+
+  
+
