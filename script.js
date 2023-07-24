@@ -201,7 +201,8 @@ function capitaliseWords(string) {
 
 // add a space after every instance of a comma in regex
 function commaSpace(string) {
-  return string.replace(/,/g, ', ');
+  var inputString = string.toString();
+  return inputString.replace(/,/g, ', ');
 }
 
 
