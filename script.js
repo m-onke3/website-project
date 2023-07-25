@@ -194,12 +194,12 @@ searchInput.addEventListener('keyup', function(event) {
 
 // capitalise every word function with regex 💀
 function capitaliseWords(string) {
-  return string.replace(/(\b[a-z](?!\s))/g, function(match) {
+  return string.replace(/(\b[a-z](?!\b))/g, function(match) {
     return match.toUpperCase();
   });
 }
 
-// add a space after every instance of a comma in regex
+// add a space after every instance of a comma with regex
 function commaSpace(string) {
   var inputString = string.toString();
   return inputString.replace(/,/g, ', ');
