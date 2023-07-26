@@ -131,7 +131,7 @@ function displayResult(data) {
     heartsRecoveredItem.innerHTML = "<b>Hearts Recovered: </b> " + data.hearts_recovered;
     infoList.appendChild(heartsRecoveredItem);
 
-    if (data.cooking_effect == "") {
+    if (data.cooking_effect === "") {
       cookingEffectItem.innerHTML = "<b>Cooking Effect </b>None";
       infoList.appendChild(cookingEffectItem);
     }
@@ -218,6 +218,3 @@ function suspiciousFunction() {
     element.classList.toggle("marquee");
   }
 }
-
-  
-
