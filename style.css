@@ -2,10 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background-image: url(background.jpg);
+  /* background-image: url(background.jpg);
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   height: 150vh;
 }
 
@@ -116,3 +116,23 @@ a {
     transform: rotate(720deg) translateX(100%);
   }
 }
+
+/* drop in animations */
+.drop-in {
+  animation: drop-in 1s ease 200ms backwards;
+ }
+ 
+ .drop-in-2 {
+  animation: drop-in 1200ms ease 500ms backwards;
+ }
+ 
+ @keyframes drop-in {
+  from {
+   opacity: 0;
+   transform: translateY(-100px);
+  }
+  to {
+   opacity: 1;
+   transform: translate(0px);
+  }
+ }
