@@ -7,10 +7,12 @@ body {
   background-position: center;
   background-repeat: no-repeat; */
   height: 150vh;
+  background-color: #eff1f5;
+  color: #4c4f69;
 }
 
 a {
-  color:mediumpurple;
+  color:#8839ef	;
 }
 
 .wrapper {
@@ -25,8 +27,8 @@ a {
 }
 
 .underline {
-  border-bottom: 1px solid mediumpurple;
-  margin-bottom: 10px;
+  border-bottom: 1px solid #8839ef	;
+  margin-bottom: 15px;
 }
 
 .search {
@@ -48,7 +50,7 @@ a {
   margin-left: 10px;
   border: none;
   border-radius: 4px;
-  background-color: mediumpurple;
+  background-color: #8839ef	;
   color: white;
   cursor: pointer;
 }
@@ -81,7 +83,7 @@ a {
   display: flex;
   justify-content: flex-start;
   margin-top: 0;
-  background-color: mediumpurple;
+  background-color: #8839ef	;
   width: 100%;
   padding: 0;
 }
@@ -90,12 +92,12 @@ a {
   display: inline-block;
   padding: 10px 20px;
   margin: 0;
-  color: white;
+  color: #eff1f5;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: purple;
+  background-color: #7287fd;
 }
 
 

@@ -44,7 +44,7 @@ function displayResult(data) {
   imageElement.style.margin = '0 auto';
   imageElement.style.border = "1px solid mediumpurple";
   imageElement.style.borderRadius = "10px";
-  imageElement.style.boxShadow = "0 0 10px 5px rgba(147, 112, 219, 0.7)";
+  imageElement.style.boxShadow = "0 0 10px 5px rgba(136, 57, 239, 0.7";
   cardContent.appendChild(imageElement);
 
   var nameElement = document.createElement('h2');
@@ -163,6 +163,10 @@ function displayResult(data) {
     infoList.appendChild(dropsItem);
     
   }
+
+  var underlineDiv = document.createElement("div");
+  underlineDiv.className = "underline";
+  cardContent.appendChild(underlineDiv);
 
   cardContent.appendChild(infoList);
   outputCard.appendChild(cardContent);
