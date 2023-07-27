@@ -59,7 +59,7 @@ function displayResult(data) {
 
     // main list elements
     var categoryItem = document.createElement('li');
-    categoryItem.innerHTML = '<b>Category: </b>' + data.category;
+    categoryItem.innerHTML = '<b>Category: </b>' + capitaliseWords(data.category);
     infoList.appendChild(categoryItem);
 
     var descriptionItem = document.createElement('li');
