@@ -6,7 +6,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat; */
-  height: 150vh;
   background-color: #eff1f5;
   color: #4c4f69;
 }
@@ -148,4 +147,27 @@ a {
 .reveal.active{
   transform: translateY(0);
   opacity: 1;
+}
+
+
+/* Tech Roles cards */
+.container {
+  height: 100%;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+
+.section {
+  height: 100vh;
+  scroll-snap-align: start;
+  padding: 40px;
+}
+
+.section:nth-child(odd) {
+  background-color: #eff1f5;
+}
+
+.section:nth-child(even) {
+  background-color: #4c4f69;
+  color:#eff1f5
 }
